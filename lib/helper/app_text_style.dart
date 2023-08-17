@@ -16,6 +16,12 @@ class AppTextStyle {
     color: AppColors.white,
   );
 
+  static final dynamic homeAppBar = GoogleFonts.inter(
+    fontSize: kFontSize20,
+    fontWeight: FontWeight.w700,
+    color: AppColors.white,
+  );
+
   static final TextStyle title = TextStyle(
     fontSize: kFontSize48,
     fontWeight: FontWeight.w700,
