@@ -7,6 +7,7 @@ import 'package:ocr_app/helper/app_text_style.dart';
 import 'package:ocr_app/helper/app_texts.dart';
 import 'package:ocr_app/screens/home/components/custom_button_with_title.dart';
 import 'package:ocr_app/screens/home/components/custom_icon_button.dart';
+import 'package:ocr_app/screens/home/components/custom_language_icon.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -89,40 +90,6 @@ class HomeScreen extends StatelessWidget {
                 title: AppTexts.history,
               ),
             ],
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class CustomLanguageIcon extends StatelessWidget {
-  final String text;
-  const CustomLanguageIcon({
-    super.key,
-    required this.text,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 100.w,
-      height: 40.h,
-      decoration: BoxDecoration(
-        color: AppColors.primary,
-        borderRadius: BorderRadius.circular(50.r),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Icon(
-            Icons.language,
-            color: AppColors.white,
-          ),
-          HorizontalSpacer(space: 10.w),
-          Text(
-            text,
-            style: AppTextStyle.body15SemiBold,
           ),
         ],
       ),
