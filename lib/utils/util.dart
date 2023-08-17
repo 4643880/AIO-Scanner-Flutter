@@ -1,8 +1,24 @@
+import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ocr_app/helper/app_colors.dart';
 
-// import 'package:flutter/material.dart';
-// import 'package:flutter_easyloading/flutter_easyloading.dart';
+class Util {
+  static void setEasyLoading() {
+    EasyLoading.instance
+      ..textColor = AppColors.white
+      ..indicatorSize = 22.w
+      ..indicatorColor = AppColors.textPrimary
+      ..indicatorType = EasyLoadingIndicatorType.foldingCube
+      ..userInteractions = false
+      ..dismissOnTap = false
+      ..backgroundColor = AppColors.white
+      ..animationStyle = EasyLoadingAnimationStyle.opacity
+      ..animationDuration = const Duration(milliseconds: 400);
+  }
+}
 
-// class Util {
+
+
 //   static String stripHtmlIfNeeded(String? text) {
 //     return text!.replaceAll(RegExp(r'<[^>]*>|&[^;]+;'), '');
 //   }
@@ -49,18 +65,18 @@
 //     );
 //   }
 
-//   static void setEasyLoading() {
-//     EasyLoading.instance
-//       ..textColor = AppColors.white
-//       ..indicatorSize = 22.w
-//       ..indicatorColor = AppColors.textPrimary
-//       ..indicatorType = EasyLoadingIndicatorType.foldingCube
-//       ..userInteractions = false
-//       ..dismissOnTap = false
-//       ..backgroundColor = AppColors.white
-//       ..animationStyle = EasyLoadingAnimationStyle.opacity
-//       ..animationDuration = const Duration(milliseconds: 400);
-//   }
+  // static void setEasyLoading() {
+  //   EasyLoading.instance
+  //     ..textColor = AppColors.white
+  //     ..indicatorSize = 22.w
+  //     ..indicatorColor = AppColors.textPrimary
+  //     ..indicatorType = EasyLoadingIndicatorType.foldingCube
+  //     ..userInteractions = false
+  //     ..dismissOnTap = false
+  //     ..backgroundColor = AppColors.white
+  //     ..animationStyle = EasyLoadingAnimationStyle.opacity
+  //     ..animationDuration = const Duration(milliseconds: 400);
+  // }
 
 //   static void dismiss() {
 //     EasyLoading.dismiss();
