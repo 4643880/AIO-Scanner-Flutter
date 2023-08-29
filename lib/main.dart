@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
             );
           },
           getPages: Routes.routes,
-          initialRoute: routeOnboarding,
+          initialRoute: routeHome,
           defaultTransition: Transition.rightToLeft,
           transitionDuration: const Duration(milliseconds: 300),
         );

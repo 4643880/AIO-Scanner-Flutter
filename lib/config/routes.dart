@@ -9,11 +9,11 @@ const routeHome = '/routeHome';
 
 class Routes {
   static final routes = [
-    GetPage(
-      name: routeOnboarding,
-      page: () => const TKDismiss(OnBoardingScreen()),
-      binding: BindingsBuilder(() {}),
-    ),
+    // GetPage(
+    //   name: routeOnboarding,
+    //   page: () => const TKDismiss(OnBoardingScreen()),
+    //   binding: BindingsBuilder(() {}),
+    // ),
     GetPage(
       name: routeHome,
       page: () => const TKDismiss(HomeScreen()),

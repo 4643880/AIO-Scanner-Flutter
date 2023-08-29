@@ -7,7 +7,7 @@ class Util {
     EasyLoading.instance
       ..textColor = AppColors.white
       ..indicatorSize = 22.w
-      ..indicatorColor = AppColors.textPrimary
+      ..indicatorColor = AppColors.primary
       ..indicatorType = EasyLoadingIndicatorType.foldingCube
       ..userInteractions = false
       ..dismissOnTap = false
