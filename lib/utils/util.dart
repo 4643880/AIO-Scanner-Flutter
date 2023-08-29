@@ -1,8 +1,10 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:ocr_app/helper/app_colors.dart';
 
-class Util {
+class Utils {
   static void setEasyLoading() {
     EasyLoading.instance
       ..textColor = AppColors.white
@@ -14,6 +16,20 @@ class Util {
       ..backgroundColor = AppColors.white
       ..animationStyle = EasyLoadingAnimationStyle.opacity
       ..animationDuration = const Duration(milliseconds: 400);
+  }
+
+  static void showSnackBar({required String title, required String desc}) {
+    Get.snackbar(
+      title,
+      desc,
+      colorText: AppColors.white,
+      backgroundColor: AppColors.primary,
+      animationDuration: const Duration(seconds: 1),
+      isDismissible: true,
+      dismissDirection: DismissDirection.startToEnd,
+      snackPosition: SnackPosition.BOTTOM,
+      margin: EdgeInsets.all(15.r),
+    );
   }
 }
 

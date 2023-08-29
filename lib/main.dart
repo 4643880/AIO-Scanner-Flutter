@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
               designSize: const Size(360, 900),
             );
             child = easyLoading(context, child);
-            Util.setEasyLoading();
+            Utils.setEasyLoading();
             return MediaQuery(
               data: MediaQuery.of(context).copyWith(textScaleFactor: 0.85),
               child: child,

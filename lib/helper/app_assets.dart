@@ -12,4 +12,6 @@ class AppAssets {
   static const String qr = "$kassetImage/qr.png";
   static const String bar = "$kassetImage/bar.png";
   static const String bs = "$kassetImage/bs.png";
+  static const String copy = "$kassetImage/copy.png";
+  static const String share = "$kassetImage/share.png";
 }

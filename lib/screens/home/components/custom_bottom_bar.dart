@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:ocr_app/components/spacers/common_spacers.dart';
+import 'package:ocr_app/config/routes.dart';
 import 'package:ocr_app/helper/app_assets.dart';
 import 'package:ocr_app/helper/app_colors.dart';
 import 'package:ocr_app/helper/app_texts.dart';
@@ -27,14 +29,20 @@ class CustomBottomBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const CustomButtonWithTitle(
+            CustomButtonWithTitle(
               img: AppAssets.collection,
               title: AppTexts.gallery,
+              onTap: () {
+                Get.toNamed(routeResult);
+              },
             ),
             HorizontalSpacer(space: 48.w),
-            const CustomButtonWithTitle(
+            CustomButtonWithTitle(
               img: AppAssets.camera,
               title: AppTexts.camera,
+              onTap: () {
+                Get.toNamed(routeResult);
+              },
             ),
           ],
         ),

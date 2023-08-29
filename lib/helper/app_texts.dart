@@ -18,6 +18,7 @@ class AppTexts {
   static const String camera = "Camera";
   static const String gallery = "Gallery";
   static const String suchEmpty = "Such Empty 📭";
+  static const String results = "Results";
   static const String homeDesc =
       "Scan QR Code, Bar Code, Business Cards or just anything to extract text";
 }

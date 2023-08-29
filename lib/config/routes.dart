@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ocr_app/screens/home/home_screen.dart';
 import 'package:ocr_app/screens/onboarding/onboarding_screen.dart';
+import 'package:ocr_app/screens/results/results.dart';
 import 'package:ocr_app/utils/keyboard_dismiss.dart';
 
 const routeOnboarding = '/routeOnboarding';
 const routeHome = '/routeHome';
+const routeResult = '/routeResult';
 
 class Routes {
   static final routes = [
@@ -17,6 +19,11 @@ class Routes {
     GetPage(
       name: routeHome,
       page: () => const TKDismiss(HomeScreen()),
+      binding: BindingsBuilder(() {}),
+    ),
+    GetPage(
+      name: routeResult,
+      page: () => const TKDismiss(ResultScreen()),
       binding: BindingsBuilder(() {}),
     ),
   ];
