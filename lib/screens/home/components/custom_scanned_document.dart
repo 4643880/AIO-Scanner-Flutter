@@ -1,8 +1,13 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
+import 'package:ocr_app/components/spacers/common_spacers.dart';
 import 'package:ocr_app/helper/app_assets.dart';
 import 'package:ocr_app/screens/home/components/custom_history_label.dart';
+import 'package:ocr_app/utils/extra_function.dart';
 
 class ScannedDocumentWidget extends StatelessWidget {
   final String text;
@@ -17,6 +22,7 @@ class ScannedDocumentWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // log(DateFormat.yMMM(date.toString()).toString());
     return Column(
       children: [
         Container(
@@ -61,10 +67,12 @@ class ScannedDocumentWidget extends StatelessWidget {
                       maxLines: 2,
                     ),
                   ),
+                  VerticalSpacer(space: 03.h),
                   SizedBox(
-                    height: 12.h,
+                    height: 15.h,
                     child: Text(
-                      date,
+                      formatDate(date),
+                      // DateFormat.yMMMd().format(DateTime.parse(date)),
                       style: GoogleFonts.roboto(
                         fontSize: 12.sp,
                         fontWeight: FontWeight.w400,

@@ -8,11 +8,13 @@ class CustomButtonWithTitle extends StatelessWidget {
   final String img;
   final String title;
   final Function() onTap;
+  final IconData? icon;
   const CustomButtonWithTitle({
     super.key,
     required this.img,
     required this.title,
     required this.onTap,
+    this.icon,
   });
 
   @override
@@ -33,11 +35,16 @@ class CustomButtonWithTitle extends StatelessWidget {
                 color: AppColors.white,
                 shape: BoxShape.circle,
               ),
-              child: Image.asset(
-                img,
-                width: 24.w,
-                height: 24.w,
-              ),
+              child: icon != null
+                  ? Icon(
+                      icon,
+                      color: AppColors.primary,
+                    )
+                  : Image.asset(
+                      img,
+                      width: 24.w,
+                      height: 24.w,
+                    ),
             ),
             VerticalSpacer(
               space: 08.h,

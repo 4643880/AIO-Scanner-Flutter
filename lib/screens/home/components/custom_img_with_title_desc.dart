@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ocr_app/components/spacers/common_spacers.dart';
 
@@ -21,11 +22,16 @@ class ImageWithTitleAndDesc extends StatelessWidget {
       width: 1.sw,
       child: Column(
         children: [
-          Image.asset(
+          SvgPicture.asset(
             img,
             width: 360.w,
             height: 300.h,
           ),
+          // Image.asset(
+          //   img,
+          //   width: 360.w,
+          //   height: 300.h,
+          // ),
           VerticalSpacer(
             space: 24.h,
           ),

@@ -2,10 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:intl/date_symbol_data_file.dart';
 import 'package:ocr_app/config/routes.dart';
+import 'package:ocr_app/helper/get_di.dart';
 import 'package:ocr_app/utils/util.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await init();
   runApp(const MyApp());
 }
 

@@ -10,15 +10,20 @@ class Utils {
       ..textColor = AppColors.white
       ..indicatorSize = 22.w
       ..indicatorColor = AppColors.primary
-      ..indicatorType = EasyLoadingIndicatorType.foldingCube
+      ..indicatorType = EasyLoadingIndicatorType.circle
       ..userInteractions = false
       ..dismissOnTap = false
       ..backgroundColor = AppColors.white
       ..animationStyle = EasyLoadingAnimationStyle.opacity
+      ..indicatorSize = 40
       ..animationDuration = const Duration(milliseconds: 400);
   }
 
-  static void showSnackBar({required String title, required String desc}) {
+  static void showSnackBar({
+    required String title,
+    required String desc,
+    required SnackPosition direction,
+  }) {
     Get.snackbar(
       title,
       desc,
@@ -27,9 +32,21 @@ class Utils {
       animationDuration: const Duration(seconds: 1),
       isDismissible: true,
       dismissDirection: DismissDirection.startToEnd,
-      snackPosition: SnackPosition.BOTTOM,
+      snackPosition: direction,
       margin: EdgeInsets.all(15.r),
     );
+  }
+
+  static void showLoading(String message) {
+    EasyLoading.show(
+      status: message,
+      dismissOnTap: false,
+      maskType: EasyLoadingMaskType.clear,
+    );
+  }
+
+  static void dismiss() {
+    EasyLoading.dismiss();
   }
 }
 

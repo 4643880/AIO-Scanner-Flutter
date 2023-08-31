@@ -3,7 +3,7 @@ import 'package:ocr_app/constant.dart';
 class AppAssets {
   static const String getStart = "$kassetImage/start.svg";
   static const String scanner = "$kassetImage/scanimg.svg";
-  static const String homeImg = "$kassetImage/Illustrations.png";
+  static const String homeImg = "$kassetImage/Illustrations.svg";
   static const String collection = "$kassetImage/collections.png";
   static const String camera = "$kassetImage/camera.png";
   static const String tipDismiss = "$kassetImage/Icon Button.png";

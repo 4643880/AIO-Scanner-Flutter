@@ -1,4 +1,4 @@
-package com.example.ocr_app
+package com.greelogix.aioscanner
 
 import io.flutter.embedding.android.FlutterActivity
 

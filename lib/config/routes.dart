@@ -2,12 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ocr_app/screens/home/home_screen.dart';
 import 'package:ocr_app/screens/onboarding/onboarding_screen.dart';
+import 'package:ocr_app/screens/qr%20scanner/qr_scanner.dart';
+import 'package:ocr_app/screens/results/business_card_result.dart';
+import 'package:ocr_app/screens/results/qr_result_screen.dart';
 import 'package:ocr_app/screens/results/results.dart';
+import 'package:ocr_app/screens/results/scanned_result.dart';
 import 'package:ocr_app/utils/keyboard_dismiss.dart';
 
 const routeOnboarding = '/routeOnboarding';
 const routeHome = '/routeHome';
 const routeResult = '/routeResult';
+const routeBusinessCardResult = '/routeBusinessCardResult';
+const routeScannedResult = '/routeScannedResult';
+const routeQrScanner = '/qrScannerScreen';
+const routeQrResult = '/routeQrResult';
 
 class Routes {
   static final routes = [
@@ -23,7 +31,27 @@ class Routes {
     ),
     GetPage(
       name: routeResult,
-      page: () => const TKDismiss(ResultScreen()),
+      page: () => TKDismiss(ResultScreen()),
+      binding: BindingsBuilder(() {}),
+    ),
+    GetPage(
+      name: routeBusinessCardResult,
+      page: () => TKDismiss(BusinessCardResultScreen()),
+      binding: BindingsBuilder(() {}),
+    ),
+    GetPage(
+      name: routeScannedResult,
+      page: () => TKDismiss(ScannedResultScreen()),
+      binding: BindingsBuilder(() {}),
+    ),
+    GetPage(
+      name: routeQrScanner,
+      page: () => const TKDismiss(QrScannerScreen()),
+      binding: BindingsBuilder(() {}),
+    ),
+    GetPage(
+      name: routeQrResult,
+      page: () => TKDismiss(QrResultScreen()),
       binding: BindingsBuilder(() {}),
     ),
   ];
