@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ocr_app/controller/business_card_controller.dart';
 import 'package:ocr_app/screens/home/home_screen.dart';
 import 'package:ocr_app/screens/onboarding/onboarding_screen.dart';
 import 'package:ocr_app/screens/qr%20scanner/qr_scanner.dart';
@@ -27,7 +28,9 @@ class Routes {
     GetPage(
       name: routeHome,
       page: () => const TKDismiss(HomeScreen()),
-      binding: BindingsBuilder(() {}),
+      binding: BindingsBuilder(() async {
+        await Get.find<BusinessCardController>().getLengthOfHistory();
+      }),
     ),
     GetPage(
       name: routeResult,

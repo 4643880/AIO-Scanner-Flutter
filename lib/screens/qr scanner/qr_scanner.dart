@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:ocr_app/config/routes.dart';
+import 'package:ocr_app/controller/business_card_controller.dart';
 import 'package:ocr_app/helper/app_colors.dart';
 import 'package:ocr_app/helper/hive_boxes.dart';
 import 'package:ocr_app/models/history_model.dart';
@@ -99,6 +100,9 @@ class _QrScannerScreenState extends State<QrScannerScreen> {
                           );
                           final box = Boxes.getHistory();
                           box.add(data);
+                          await data.save();
+                          await Get.find<BusinessCardController>()
+                              .getLengthOfHistory();
                           Get.toNamed(
                             routeQrResult,
                             arguments: {

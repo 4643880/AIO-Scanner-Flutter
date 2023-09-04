@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
+import 'package:ocr_app/controller/business_card_controller.dart';
 import 'package:ocr_app/helper/app_assets.dart';
 import 'package:ocr_app/helper/app_colors.dart';
 import 'package:ocr_app/helper/app_texts.dart';
@@ -115,6 +116,9 @@ class _ScannedResultScreenState extends State<ScannedResultScreen> {
     );
     final box = Boxes.getHistory();
     box.add(data);
+    await data.save();
+
+    await Get.find<BusinessCardController>().getLengthOfHistory();
 
     ///End busy state
     setState(() {

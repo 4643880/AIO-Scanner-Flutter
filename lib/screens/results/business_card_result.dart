@@ -239,8 +239,9 @@ class _BusinessCardResultScreenState extends State<BusinessCardResultScreen> {
     );
     final box = Boxes.getHistory();
     box.add(data);
-
-    data.save();
+    log("reaching here");
+    await data.save();
+    await Get.find<BusinessCardController>().getLengthOfHistory();
 
     Utils.dismiss();
   }
